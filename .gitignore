@@ -1,0 +1,38 @@
+# These ignore rules support using the repo simultaneously
+# as the $NVS_HOME directory where node versions are installed.
+
+# User settings file
+/settings.json
+
+# Temporary post-execution scripts
+/nvs_tmp_*
+
+# Node download cache directories
+/*/
+
+# Main code, tests, and docs
+!/lib/
+!/deps/
+!/test/
+!/doc/
+!/tools/
+!/setup/
+!/chocolatey/
+
+# Temporary files generated during testing
+/test/temp
+
+# Exclude packages under node_modules because they are dev dependencies
+/node_modules/
+
+# Default version link
+/default
+
+# Nuget packages
+packages/
+
+# Generated chocolatey package
+*.nupkg
+
+# Other excluded files
+*.suo

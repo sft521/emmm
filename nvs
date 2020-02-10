@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# DO NOT SOURCE THIS SCRIPT. Source nvs.sh instead.
+
+# This script enables running NVS as an executable.  The one limitation is
+# that it cannot modify environment variables (PATH) of the calling shell,
+# therefore the 'nvs use' command is not available.
+
+# Enable the nvsudo() shell function to modify the PATH of the sudo environment.
+if [ -n "${NVS_CURRENT}" ]; then
+	export PATH="${NVS_CURRENT}:$PATH"
+fi
+
+export NVS_EXECUTE=1
+source "`dirname $0`/nvs.sh"
+nvs $*

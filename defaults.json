@@ -1,0 +1,9 @@
+{
+	"aliases": {
+	},
+	"remotes": {
+		"default": "node",
+		"node": "https://nodejs.org/dist/"
+	},
+	"bootstrap": "node/10.12.0"
+}
